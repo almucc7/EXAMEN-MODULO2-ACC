@@ -1,0 +1,32 @@
+{
+  "name": "prototipo-con-capas",
+  "version": "1.0.0",
+  "description": "Parte 2 del examen de Backend del Módulo ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "build": "tsc -w"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almucc7/EXAMEN-MODULO2-ACC.git"
+  },
+  "author": "ACC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/almucc7/EXAMEN-MODULO2-ACC/issues"
+  },
+  "homepage": "https://github.com/almucc7/EXAMEN-MODULO2-ACC#readme",
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "express": "^4.21.2",
+    "prisma": "^6.5.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
