@@ -1,32 +1,43 @@
 {
   "name": "prototipo-con-capas",
   "version": "1.0.0",
-  "description": "Parte 2 del examen de Backend del Módulo ",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "node dist/server.js",
-    "dev": "ts-node src/server.ts",
-    "build": "tsc -w"    
+    "start": "cross-env NODE_ENV=prod node dist/app.js",
+    "start:dev": "cross-env NODE_ENV=dev DEBUG=app:* node --watch --env-file=.env dist/app.js",
+    "build": "tsc",
+    "dev": "cross-env NODE_ENV=dev ts-node src/app.ts",
+    "test": "vitest run",
+    "test:c": "vitest run --coverage",
+    "lint": "eslint . --ext .ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/almucc7/EXAMEN-MODULO2-ACC.git"
-  },
-  "author": "ACC",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/almucc7/EXAMEN-MODULO2-ACC/issues"
-  },
-  "homepage": "https://github.com/almucc7/EXAMEN-MODULO2-ACC#readme",
-  "dependencies": {
-    "@prisma/client": "^6.5.0",
-    "express": "^4.21.2",
-    "prisma": "^6.5.0",
-    "zod": "^3.24.2"
+  "description": "",
+  "prettier": {
+    "singleQuote": true
   },
   "devDependencies": {
-    "@types/express": "^5.0.1",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.13.5",
+    "eslint": "^9.21.0",
+    "prettier": "^3.5.2",
+    "prisma": "^6.5.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.25.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.24.2"
   }
 }
